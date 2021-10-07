@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+  colossusxt:
+    image: docker.io/ciwox/colossusxt:latest
+    ports:
+      - "51572:51572"
+      - "51573:51573"
+    volumes:
+      - ./ColossusXT.conf:/home/colossusxt/.ColossusXT/ColossusXT.conf # Custom conf file
+  
+  electrs:
+    image: docker.io/ciwox/colx-electrs:latest
+    ports:
+      - "3220:3220"
+      - "4554:4554"
+    #volumes:
+    #  - ./entrypoint.sh:/usr/local/bin/entrypoint.sh # Uncomment if you want to use custom data%                                                                                   
