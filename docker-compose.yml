@@ -3,6 +3,7 @@ services:
 
   colossusxt:
     image: docker.io/ciwox/colossusxt:latest
+    restart: unless-stopped
     ports:
       - "51572:51572"
       - "51573:51573"
@@ -11,6 +12,7 @@ services:
   
   electrs:
     image: docker.io/ciwox/colx-electrs:latest
+    restart: unless-stopped
     ports:
       - "3220:3220"
       - "4554:4554"
