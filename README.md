@@ -7,12 +7,13 @@ cd ColossusXT-Docker
 docker-compose pull
 docker-compose up -d
 ```
+
 # Check logs
 ```sh
 docker-compose logs -f
 ```
 
-# Running with docker-compose
+# Starting docker-compose
 ```sh
 docker-compose up -d
 ```
